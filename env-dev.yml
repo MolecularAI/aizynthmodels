@@ -1,0 +1,7 @@
+name: aizynthmodels
+channels:
+  - https://conda.anaconda.org/conda-forge
+  - defaults
+dependencies:
+  - python>=3.9,<3.11
+  - poetry=1.8.2

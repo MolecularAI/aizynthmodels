@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "aizynthmodels"
+version = "1.0.0"
+description = "Models used for synthesis prediction"
+authors = ["Westerlund, Annie <annie.westerlund@astrazeneca.com>"]
+maintainers = [
+    "Westerlund, Annie <annie.westerlund@astrazeneca.com>",
+    "Saigiridharan, Lakshidaa <lakshidaa.saigiridharan@astrazeneca.com>",
+    "Genheden, Samuel <samuel.genheden@astrazeneca.com>",
+]
+license = "Apache 2.0"
+
+packages = [{ include = "aizynthmodels" }]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+rdkit = "2022.9.3"
+torch = "^2.2.2"
+pytorch-lightning = "^2.2.1"
+pytorch-tree-lstm = "^0.1.3"
+tensorboard = "^2.10.0"
+tensorboardx = "^1.8"
+hydra-core = "^1.3.2"
+hydra-colorlog = "^1.2.0"
+hydra-optuna-sweeper = "^1.2.0"
+fastapi = "^0.115.0"
+uvicorn = "^0.22.0"
+pandas = "<1.4.3"
+jupytext = "^1.3.3"
+papermill = "^2.3.4"
+scikit-learn = ">0.21.0"
+metaflow = "^2.10.6"
+mendeleev = "^0.10.0"
+nbconvert = "^7.2.3"
+onnx = "^1.13.1"
+tf2onnx = "^1.13.0"
+urllib3 = "<2.0"
+jupyter = "^1.1.1"
+matplotlib = "^3.9.2"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "*"
+pytest = "*"
+pytest-cov = "*"
+black = "*"
+isort = "*"
+flake8 = "*"
+mypy = "*"
+pytest-mock = "^3.10.0"
+pytest-datadir = "^1.3.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:"
+]
